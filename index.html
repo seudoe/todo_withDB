@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial;
+        background-color: rgb(161, 161, 161);
+        /* color: white; */
+      }
+    </style>
+    <title> Todoer </title>
+    <link rel="icon" type="image/x-icon" href="imgs/todoer.png">
+    <script>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="main-logo">
+        <h1>Todoer</h1>
+      </div>
+    </header>
+    <main>
+      <div class="homeB-div">
+        <button class="home">Home</button>
+      </div>
+      <div class="loginB-div">
+        <button class="login">Login or Register</button>
+      </div>
+    </main>
+  </body>
+  <style>
+    body{
+      margin-top: 70px;
+    }
+    header{
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      /* color: white; */
+    }
+    header h1{
+      margin: 0;
+      padding: 0;
+    }
+    .main-logo{
+      flex: 1;
+    }
+    main{
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding-top: 30px;
+    }
+    main div button {
+      color: black;
+      /* background-color: transparent; */
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: rgb(189, 189, 189);
+    }
+    main div button:hover{
+      color: rgb(0, 0, 0);
+
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
+    }
+    main div button:active{
+      /* color: rgb(126, 126, 126); */
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+  </style>\
+  <script>
+    document.querySelector('.home').onclick = () => {
+      window.location.href = '/home'
+    }
+    document.querySelector('.login').onclick = () => {
+      window.location.href = '/login'
+    }
+  </script>
+</html> 

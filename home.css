@@ -1,0 +1,333 @@
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    margin: 0;
+    padding: 0;
+}
+.main-logo{
+    flex: 0.9;
+}
+.log-out{
+    flex: 0.1;
+}
+.logout-button{
+    color: black;
+    /* background-color: transparent; */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(189, 189, 189);
+}
+.logout-button:hover{
+    color: rgb(0, 0, 0);
+
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
+}
+.logout-button:active{
+    /* color: rgb(126, 126, 126); */
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    /* align-items: center; */
+    /* flex-direction: row; */
+    margin-top: 70px;
+    /* text-align: center; */
+    /* background-color: black; */
+    justify-content: center;
+}
+main{
+    width: 100%;
+    /* height: 30px; */
+    /* background-color: lightslategray; */
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+    max-width: 90%;
+}
+
+/* Undone Notes -----------------------------------------------------------  */
+
+.left-side{
+    display: flex;
+    flex: 1.4;
+    flex-direction: column;
+    gap: 20px;
+}
+.undone-label{
+    padding: 5px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.add-button{
+    width: 100%;
+    background-color: #007bff;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.notesListDiv{
+    /* background-color: lightgreen; */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* .doneNotesListDiv{
+    background-color: sandybrown;
+    flex: 1;
+    height: 40px;
+    display: flex;
+} */
+
+.noteDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: solid 3px black;
+    box-shadow: 5px 5px 3px rgb(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: rgb(194, 194, 194);
+}
+
+.noteCheck{
+    height: 30px;
+    width: 30px;
+    /* appearance: none; */
+    -webkit-appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Adjust this value for desired roundness */
+    /* cursor: pointer; */
+    vertical-align: middle;
+    background-color: white;
+}
+.noteCheck:checked {
+  background-color: #007bff; /* Example: blue background when checked */
+  border-color: #007bff;
+}
+
+.note-div{
+    flex: 1;
+    /* background-color: aquamarine; */
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.note-input{
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: auto;
+}
+.note-input:focus{
+    border: none;
+    outline: none;
+    /* cursor: crosshair; */
+}
+
+.note-date-div{
+    margin-right: 10px;
+}
+.buttons-div{
+    /* width:px; */
+    display: flex;
+}
+.noteDiv img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+.noteDiv button{
+    width: 40px;
+    height: 40px;
+    /* aspect-ratio: 1/1; */
+    padding: 0;
+    margin: 4px 6px 4px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+button.delete{
+    order: 9;
+}
+
+
+
+
+
+.add-new-note-div{
+    position: fixed;
+    background-color: #ccc;
+    border: solid 3px blue;
+    padding: 20px;
+    /* font-size: 20px; */
+    top: 40%;
+    width: 500px;
+    border-radius: 10px;
+}
+.new-input{
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    margin: 0 0 20px 0;
+}
+.new-input:focus{
+    border: none;
+    outline: none;
+}
+.tempButtons{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.add-add{
+    margin-left: 40px;
+}
+
+
+/* -----DONE NOTES--------------------------------------------------------------- */
+
+
+.doneNotesListDiv{
+    /* background-color: sandybrown; */
+    flex: 1;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.done-label{
+    padding: 5px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.doneNoteDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: solid 3px black;
+    box-shadow: 5px 5px 3px rgb(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: rgb(194, 194, 194);
+}
+
+.doneNoteCheck{
+    height: 30px;
+    width: 30px;
+    /* appearance: none; */
+    -webkit-appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Adjust this value for desired roundness */
+    /* cursor: pointer; */
+    vertical-align: middle;
+    background-color: white;
+}
+.doneNoteCheck:checked {
+  background-color: #007bff; /* Example: blue background when checked */
+  border-color: #007bff;
+}
+.doneNote-div{
+    flex: 1;
+    /* background-color: aquamarine; */
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.doneNote-input{
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: auto;
+}
+.doneNote-input:focus{
+    border: none;
+    outline: none;
+    /* cursor: crosshair; */
+}
+
+.donebuttons-div{
+    /* width:px; */
+    display: flex;
+}
+.doneNoteDiv img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+
+.doneNoteDiv button{
+    width: 40px;
+    height: 40px;
+    /* aspect-ratio: 1/1; */
+    padding: 0;
+    margin: 4px 6px 4px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/* Both done and undone - mostly for resposive window */
+@media(max-width: 1110px) and (min-width: 600px){
+    main{
+        flex-direction: column;
+        margin: 0 15%;
+        min-width: 560px;
+    }
+}
+
+@media (max-width:610px){
+    main{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+

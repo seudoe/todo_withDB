@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial;
+      }
+    </style>
+    <title> Todoer </title>
+    <link rel="icon" type="image/x-icon" href="imgs/todoer.png">
+  </head>
+  <body>
+    <header>
+      <div class="main-logo">
+        <h1>Todoer</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="login someWhat">
+          <div class="name"><h2>Login</h2></div>
+          <!-- <h2>Login</h2> -->
+          <div class="email-div">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" class="nput emailInp" placeholder="Email" required>
+          </div>
+          <div class="passw-div">
+            <label for="passw">Password:</label>
+            <input type="text" id="passw"  maxlength="18" minlength="8" class="nput passwInp" placeholder="Password">
+          </div>
+          <div class="buttons">
+            <button class="reset-button">Reset</button>  
+            <button class="login-button">Login</button>
+          </div>
+
+          <div class="incorrect"></div>
+
+
+          <p class="new-here">New here? </p>
+          <button class="switchTo-register">Register </button>
+
+
+        </div>
+        <style>
+          .container{
+            border: 2px solid;
+            border-radius: 10px;
+          }
+          .someWhat div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin: 10px;
+          }
+          .name{
+            text-align: center;
+          }
+          .name h2{
+            margin: 0; padding: 0;
+          }
+
+          .someWhat div label{
+            font-size: 20px;
+            font-weight: 700;
+            margin: 20px 0 3px 0;
+          }
+
+
+          .someWhat div .nput{
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            height: 1cm;
+
+            font-size: 140%;
+            padding-bottom: 0;
+            line-height: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+          }
+
+          .someWhat div .nput:focus{
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, .1), 0px 0px 3px rgba(0, 0, 0, .1) inset;
+
+            background-color: transparent;
+            border-bottom: 1px solid rgb(17, 182, 233);
+          }
+
+          .someWhat div.buttons{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+          }
+
+          .buttons button{
+            cursor: pointer;
+            height: 1cm;
+            font-size: 0.5cm;
+            border-radius: 8px;
+          }
+          .buttons button:hover{
+            background-color: rgb(194, 194, 194);
+          }
+          .buttons button:active{
+            background-color: rgb(172, 172, 172);
+          }
+
+          .reset-button{
+            flex:1;
+            margin: 10px 10px 10px 0;
+            /* background-color: white; */
+          }
+          .login-button, .register-button{
+            flex:1;
+            margin: 10px 0 10px 10px;
+          }
+
+          .new-here{
+            display: inline;
+          }
+          .switchTo-register, .switchTo-login{
+            border: none;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 20px;
+            cursor: pointer;
+          }
+
+          .incorrect, .incorrectR{
+            color: rgb(175, 0, 0);
+            
+          }
+        </style>
+        
+
+
+        <div class="register someWhat" style="display: none;">
+          <!-- <div class="login"> -->
+          <div class="name"><h2>Register</h2></div>
+          <div class="email-div">
+
+            <label for="email2">Email:</label>
+            <input type="text" id="email2" class="nput emailInp2" placeholder="Email" required>
+          </div>
+          <div class="passw-div">
+            <label for="passw2">Password:</label>
+            <input type="text" id="passw2"  maxlength="18" minlength="8" class="nput passwInp2" placeholder="Password">
+          </div>
+          <div class="buttons">
+            <button class="reset-button">Reset</button>  
+            <button class="register-button">Register</button>
+          </div>
+
+          <div class="incorrectR"></div>
+
+
+          <p class="new-here">Already have an account? </p>
+          <button class="switchTo-login">Login </button>
+
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <!-- <button class="switch-login"></button> -->
+      
+    </main>
+    <style>
+      header{
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+      header h1{
+        margin: 0;
+        padding: 0;
+      }
+      .main-logo{
+        flex: 1;
+      }
+      body{
+        display: flex;
+        flex-direction: column;
+        /* background-color: black; */
+        /* display: flex; */
+        top: 70px;
+        width: 100vw;
+        position: fixed;
+        /* left: 35vw; */
+        /* top: 0; */
+        /* bottom: 0; */
+        right: 0;
+        left: 0;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+      }
+      main{
+        width: 100%;
+        /* background-color: lightcoral; */
+        display: flex;
+        justify-content: center;
+        flex: 1;
+      }
+      .container{
+        margin-top: 10vw;
+        background-color: rgb(194, 194, 194);
+        padding: 20px;
+        width: 10cm;
+        min-width: 7cm;
+        /* height: 20vw; */
+        /* min-height: 10cm; */
+      }
+
+    </style>
+  </body>
+  <script src="login.js"></script>
+</html>

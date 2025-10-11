@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial;
+      }
+    </style>
+
+    <script>
+      try{
+        console.log(JSON.parse(localStorage.getItem('localEmail')))
+      } 
+      catch(err){
+        console.log(err);
+        window.location.href = '/login';
+      }
+      window.onload = () => {
+        let {email} = JSON.parse(localStorage.getItem('localEmail'));
+        if(email){
+
+        }
+        else {
+          window.location.href = '/login';
+        }
+      }
+    </script>
+
+    
+    <link rel="stylesheet" href="./home.css"> 
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <title> Todoer dashboard </title>
+    <link rel="icon" type="image/x-icon" href="imgs/todoer.png">
+    <script>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="main-logo">
+        <h1 class="header-logo">Todoer</h1>
+      </div>
+      <div class="log-out">
+        <button class="logout-button">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="left-side">
+        <div class="undone-label">
+          To-Do:
+        </div>
+        <div class="addButton-div">
+          <button class="add-button">Add</button>
+        </div>
+        <div class="notesListDiv">
+          
+          <div class="noteDiv">
+            <div class="checkbox-div">
+              <input type="checkbox" class="noteCheck">
+            </div> 
+            <div class="note-div">
+              <input type="text" class="note-input" value="SOmething">
+            </div>
+            <div class="note-date-div">03:39 &nbsp; 23/32/4323</div>
+            <div class="buttons-div">
+              <button class="edit "><img src="./imgs/edit.png" alt=""></button>
+              <button class="delete "><img src="./imgs/delete.png" alt=""></button>
+              <button class="saveButton" hidden><img src="./imgs/save.png" alt="" ></button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      
+      <div class="doneNotesListDiv">
+        <div class="done-label">
+          Done:
+        </div>
+        <div class="doneNoteDiv">
+          <div class="doneCheck-div">
+            <input type="checkbox" class="doneNoteCheck" checked>
+          </div>
+          <div class="doneNote-div">
+            <input type="text" class="doneNote-input">
+          </div>
+          <div class="donebuttons-div">
+            <button class="done-delete">
+              <img src="./imgs/delete.png" alt="">
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <section class="add-new-note-div" hidden>
+      <div class="container">
+        <input type="text" class="new-input" placeholder="Enter todo">
+        <div >
+          <button class="tempButtons cancel">Cancel</button>
+          <button class="tempButtons add-add">Add</button>
+        </div>
+
+      </div>
+
+    </section>
+  </body>
+  <script>console.log('Hello home.html 1')</script>
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+  <script type="module" src="./home.js"></script>
+  <script>console.log('Hello home.html 2')</script>
+</html>

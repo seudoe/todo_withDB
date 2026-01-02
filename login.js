@@ -25,7 +25,7 @@ let loginButton = document.querySelector('.login-button');
 
 let current_user = {};
 
-loginButton.onclick = () => {
+loginFunc = () => {
     if(!authenticate(emailInp.value, passInp.value).status){
         document.querySelector('.incorrect').innerHTML = authenticate(emailInp.value, passInp.value).tip;
         console.log('Authentication Failed: ', authenticate(emailInp.value, passInp.value).tip)
@@ -72,14 +72,20 @@ loginButton.onclick = () => {
         console.log('Error ----------------\n  ',  error);
     })
 }
-
+loginButton.onclick = loginFunc;
+passInp.addEventListener('keydown', e => {
+    if(e.key == 'Enter') loginFunc();
+})
+emailInp.addEventListener('keydown', e => {
+    if(e.key === 'Enter') passInp.focus();
+})
 
 
 let emailInp2 = document.querySelector('.emailInp2');
 let passInp2 = document.querySelector('.passwInp2');
 let registerButton = document.querySelector('.register-button');
 
-registerButton.onclick = () => {
+registerFunc = () => {
     if(!authenticate(emailInp2.value, passInp2.value).status){
         document.querySelector('.incorrectR').innerHTML = authenticate(emailInp2.value, passInp2.value).tip;
         console.log('Authentication Failed: ', authenticate(emailInp2.value, passInp2.value).tip)
@@ -131,6 +137,13 @@ registerButton.onclick = () => {
         console.log('Error ----------------\n ', error);
     })
 }
+registerButton.onclick = registerFunc;
+passInp2.addEventListener('keydown', e => {
+    if(e.key == 'Enter') registerFunc();
+})
+emailInp2.addEventListener('keydown', e => {
+    if(e.key === 'Enter') passInp2.focus();
+})
 
 function authenticate(email, pass){
     if(email.trim().length === 0  || pass.trim().length === 0){

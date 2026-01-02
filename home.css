@@ -12,6 +12,10 @@ header h1{
 }
 .main-logo{
     flex: 0.9;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 }
 .log-out{
     flex: 0.1;

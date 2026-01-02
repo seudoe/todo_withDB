@@ -16,7 +16,9 @@
   <body>
     <header>
       <div class="main-logo">
-        <h1>Todoer</h1>
+        <img src="imgs/todoer.png" alt="todoer-logo" style="width: 40px;">
+        <h1>
+          Todoer</h1>
       </div>
     </header>
     <main>
@@ -46,6 +48,9 @@
       padding: 0;
     }
     .main-logo{
+      display: flex;
+      gap: 30px;
+      justify-content: center;
       flex: 1;
     }
     main{
@@ -75,7 +80,7 @@
       box-shadow: none;
     }
 
-  </style>\
+  </style>
   <script>
     document.querySelector('.home').onclick = () => {
       window.location.href = '/home'
